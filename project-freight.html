@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freight Shipment Tracker | John Eric Malonosan</title>
+    <meta name="description" content="AI-assisted freight shipment tracking dashboard for status, ETAs, exceptions, BOL/POD visibility, and operational monitoring.">
+    <meta property="og:title" content="Freight Shipment Tracker | John Eric Malonosan">
+    <meta property="og:description" content="Real-time dispatch dashboard with shipment lifecycle tracking, KPI monitoring, and BOL/POD workflows.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="assets/freight-tracker.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .nav-links { display: none; }
+
+        /* Hero / Project Header */
+        .project-hero {
+            min-height: 80vh; display: flex; flex-direction: column; 
+            justify-content: center; padding-top: 100px;
+        }
+        .project-tags { display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
+        .project-tags span { font-size: 0.75rem; padding: 6px 12px; border: 1px solid #333; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; color: #aaa; }
+
+        /* Details Layout */
+        .details-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px;
+        }
+        .detail-label {
+            display: inline-block; font-family: var(--font-display); font-weight: 500;
+            color: #fff; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em;
+            margin-bottom: 10px;
+        }
+        .label-result.detail-label { color: #22C55E; }
+        .detail-box p { font-size: 1.2rem; line-height: 1.5; }
+        .detail-box strong { color: #fff; font-weight: 500; }
+
+        /* Image Gallery */
+        .gallery-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+        }
+        .gallery-item {
+            border: 1px solid #111; overflow: hidden; background: #0a0a0a;
+            transition: border-color 0.3s ease;
+        }
+        .gallery-item:hover { border-color: #333; }
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.02); }
+        .gallery-item.wide { grid-column: span 2; }
+
+        .cta-section { text-align: center; padding: 140px 0; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .details-grid, .gallery-grid { grid-template-columns: 1fr; gap: 30px; }
+            .gallery-item.wide { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cursor" id="cursor"></div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        <div class="logo">Project 01</div>
+    </header>
+
+    <!-- Project Header -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-tags reveal">
+                <span>DeepSeek</span>
+                <span>Claude</span>
+                <span>JavaScript</span>
+            </div>
+            <h1 class="reveal">Freight Shipment Tracker</h1>
+            <p class="reveal" style="font-size: 1.5rem; color: #e0e0e0; max-width: 800px;">Built with DeepSeek and Claude — an AI-assisted shipment tracking workflow for status, ETAs, exceptions, BOL/POD visibility, and operational monitoring.</p>
+            
+            <div class="details-grid">
+                <div class="detail-box reveal">
+                    <span class="detail-label label-problem">The Problem</span>
+                    <p>Shipment status was scattered across carrier websites, emails, and spreadsheets. There was no single source of truth, causing delays in exception detection.</p>
+                    
+                    <span class="detail-label" style="margin-top: 30px;">The Solution</span>
+                    <p>Built an AI-assisted shipment tracking workflow to organize shipment status, ETA updates, exception notes, BOL/POD visibility, operational remarks, and follow-up monitoring — using DeepSeek and Claude for workflow planning, feature structuring, logic refinement, and documentation.</p>
+                </div>
+                <div class="detail-box reveal" style="display: flex; flex-direction: column; justify-content: flex-end;">
+                    <span class="detail-label label-result">The Result</span>
+                    <p style="font-size: 1.4rem; color: #fff;"><strong>100+</strong> shipments tracked solo — delay detection cut from <strong>48 hours to under 4 hours</strong> across <strong>500+ daily transactions</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section>
+        <div class="container">
+            <h2 class="reveal">System Interface</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item wide reveal">
+                    <img src="assets/freight-tracker.jpg" alt="Freight Tracker Main Dashboard">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/freight-1.jpg" alt="Freight Tracker View 1">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/freight-2.jpg" alt="Freight Tracker View 2">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/freight-3.jpg" alt="Freight Tracker View 3">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/freight-4.jpg" alt="Freight Tracker View 4">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/freight-5.jpg" alt="Freight Tracker View 5">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/freight-6.jpg" alt="Freight Tracker View 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="reveal">Want to see more?</h2>
+            <p class="reveal" style="margin: 0 auto 20px;">Check out the other AI-assisted systems or get in touch.</p>
+            <a href="index.html#systems" class="btn reveal">View Other Projects</a>
+        </div>
+    </section>
+
+    <footer>&copy; <span id="year"></span> John Eric Malonosan. AI Systems Developer.</footer>
+
+    <button id="back-to-top" aria-label="Back to top">&uarr;</button>
+
+    <script>
+        // Auto-close tab if opened from portfolio
+        if (window.opener) {
+            const backLink = document.querySelector('.back-link');
+            if (backLink) {
+                backLink.removeAttribute('href');
+                backLink.style.cursor = 'pointer';
+                backLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.close();
+                });
+            }
+        }
+
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.querySelectorAll('a, button, .gallery-item').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => observer.observe(el));
+
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

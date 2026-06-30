@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wholesale Sales Management | John Eric Malonosan</title>
+    <meta name="description" content="Full-stack wholesale sales management system with encoding, SOA, aging reports, role-based access, and audit trail.">
+    <meta property="og:title" content="Wholesale Sales Management | John Eric Malonosan">
+    <meta property="og:description" content="Office-ready sales management system with encoding, SOA, aging, and role-based access.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .nav-links { display: none; }
+
+        .project-hero {
+            min-height: 80vh; display: flex; flex-direction: column; 
+            justify-content: center; padding-top: 100px;
+        }
+        .project-tags { display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
+        .project-tags span { font-size: 0.75rem; padding: 6px 12px; border: 1px solid #333; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; color: #aaa; }
+
+        .details-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px;
+        }
+        .detail-label {
+            display: inline-block; font-family: var(--font-display); font-weight: 500;
+            color: #fff; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em;
+            margin-bottom: 10px;
+        }
+        .label-result.detail-label { color: #22C55E; }
+        .detail-box p { font-size: 1.2rem; line-height: 1.5; }
+        .detail-box strong { color: #fff; font-weight: 500; }
+
+        .features-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px;
+        }
+        .feature-card {
+            border: 1px solid #222; padding: 24px; border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+        .feature-card:hover { border-color: rgba(0, 229, 255, 0.3); }
+        .feature-card h4 { font-size: 1rem; margin-bottom: 8px; color: var(--accent); }
+        .feature-card p { font-size: 0.9rem; color: #888; line-height: 1.5; }
+
+        .cta-section { text-align: center; padding: 140px 0; }
+        .btn { font-family: var(--font-display); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 15px 30px; border: 1px solid var(--accent); border-radius: 50px; transition: all 0.3s ease; color: var(--accent); display: inline-block; margin-top: 30px; }
+        .btn:hover { background: var(--accent); color: #000; opacity: 1; }
+        .btn-secondary { border: 1px solid rgba(0, 229, 255, 0.3); color: #aaa; }
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); background: transparent; }
+
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+        .gallery-item { border: 1px solid #1a1a1a; overflow: hidden; background: #0a0a0a; transition: border-color 0.3s; cursor: none; }
+        .gallery-item:hover { border-color: #333; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .gallery-item:hover img { transform: scale(1.02); }
+        .gallery-item.wide { grid-column: span 2; }
+        .gallery-label { font-size: 0.75rem; color: #666; text-transform: uppercase; letter-spacing: 0.05em; padding: 10px 14px; border-top: 1px solid #1a1a1a; }
+
+        @media (max-width: 768px) {
+            .details-grid, .features-grid { grid-template-columns: 1fr; gap: 30px; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-item.wide { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cursor" id="cursor"></div>
+
+    <header class="navbar">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        <div class="logo">Project 04</div>
+    </header>
+
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-tags reveal">
+                <span>JavaScript</span>
+                <span>Role-Based Auth</span>
+                <span>Audit Trail</span>
+                <span>SOA</span>
+                <span>Aging Reports</span>
+            </div>
+            <h1 class="reveal">Wholesale Sales Management</h1>
+            <p class="reveal" style="font-size: 1.5rem; color: #e0e0e0; max-width: 800px;">A full-stack office-ready system for wholesale sales — encoding, SOA generation, aging reports, role-based access, and audit monitoring in one secure platform.</p>
+            
+            <div class="details-grid">
+                <div class="detail-box reveal">
+                    <span class="detail-label label-problem">The Problem</span>
+                    <p>Wholesale operations relied on scattered spreadsheets for invoicing, receivables, and aging. No unified system, no audit trail, no role-based access control — leading to errors, duplicate entries, and compliance gaps.</p>
+                    
+                    <span class="detail-label" style="margin-top: 30px;">The Solution</span>
+                    <p>Built a comprehensive sales management system with multi-step encoding, customer profiles, SOA generation with aging buckets, role-based access (Admin, Encoder, Reviewer, Viewer), and full audit trail logging.</p>
+                </div>
+                <div class="detail-box reveal" style="display: flex; flex-direction: column; justify-content: flex-end;">
+                    <span class="detail-label label-result">The Result</span>
+                    <p style="font-size: 1.4rem; color: #fff;">Single-platform system handling <strong>3,300+ transactions</strong> — <strong>zero non-conformities</strong> across two ISO 9001:2015 external audits — deployed live on Vercel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="reveal">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <h4>Multi-Step Encoding</h4>
+                    <p>4-step invoice creation: document details, product lines, payment terms, and review. Auto-calculates totals, EWT, and receivables.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h4>Statement of Account</h4>
+                    <p>Print-ready SOA with aging buckets (1-30, 30-60, 60-90, 90+ days), customer balance tracking, and payment status.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h4>Aging Report</h4>
+                    <p>Receivables grouped by customer, document type, or representative. Filter by status, export to CSV/Excel, print-ready layout.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h4>Role-Based Access</h4>
+                    <p>4 roles with granular permissions: Admin (full control), Encoder (create/edit), Reviewer (view/export), Viewer (read-only).</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h4>Audit Trail</h4>
+                    <p>Logs every action — edits, exports, cancellations, logins. Filterable by user, module, action type, with device tracking.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <h4>Customer Profiles</h4>
+                    <p>Reusable customer master data — name, address, TIN, payment terms, bank details. Autofills on transaction creation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="reveal">System Interface</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item wide reveal">
+                    <img src="assets/wholesale-1.jpg" alt="Dashboard Summary" loading="lazy">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/wholesale-2.jpg" alt="Encoding Step 1" loading="lazy">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/wholesale-3.jpg" alt="Encoding Step 2" loading="lazy">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/wholesale-4.jpg" alt="Encoding Step 3" loading="lazy">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/wholesale-5.jpg" alt="Statement of Account" loading="lazy">
+                </div>
+                <div class="gallery-item wide reveal">
+                    <img src="assets/wholesale-6.jpg" alt="SOA Print Layout" loading="lazy">
+                </div>
+                <div class="gallery-item wide reveal">
+                    <img src="assets/wholesale-7.jpg" alt="Aging Report" loading="lazy">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/wholesale-8.jpg" alt="Account Management" loading="lazy">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/wholesale-9.jpg" alt="Audit Trail" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="reveal">See it in action</h2>
+            <p class="reveal" style="margin: 0 auto 20px;">Internal system deployed for office use — contact for access credentials.</p>
+            <div class="reveal" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://satc-accounting-qnpc.vercel.app/" target="_blank" class="btn">Live System ↗</a>
+                <a href="mailto:jemalonosan@gmail.com?subject=Wholesale%20Sales%20Management%20Demo%20Request" class="btn btn-secondary">Request Access</a>
+                <a href="index.html#systems" class="btn btn-secondary">View Other Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>&copy; <span id="year"></span> John Eric Malonosan. AI Systems Developer.</footer>
+
+    <button id="back-to-top" aria-label="Back to top">&uarr;</button>
+
+    <script>
+        // Auto-close tab if opened from portfolio
+        if (window.opener) {
+            const backLink = document.querySelector('.back-link');
+            if (backLink) {
+                backLink.removeAttribute('href');
+                backLink.style.cursor = 'pointer';
+                backLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.close();
+                });
+            }
+        }
+
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.querySelectorAll('a, button, .gallery-item').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => observer.observe(el));
+
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
